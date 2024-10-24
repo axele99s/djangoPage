@@ -71,3 +71,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.agregar-noticia {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Color del botón Agregar Noticia */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.agregar-noticia:hover {
+    background-color: #45a049; /* Color del botón al pasar el mouse */
+}
