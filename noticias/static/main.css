@@ -75,18 +75,25 @@ footer {
     display: inline-block;
     margin-top: 10px;
     padding: 12px 20px; /* Espaciado interno */
-    background-color: #4CAF50; /* Color del botón */
+    background: linear-gradient(45deg, #4CAF50, #2E7D32); /* Degradado */
     color: white;
     text-decoration: none;
-    border-radius: 8px; /* Esquinas redondeadas */
+    border-radius: 30px; /* Esquinas más redondeadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: all 0.3s ease; /* Transición suave para el hover */
-    font-size: 1.1em; /* Tamaño de fuente */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
     font-weight: bold; /* Texto en negrita */
+    text-align: center;
 }
 
 .agregar-noticia:hover {
-    background-color: #45a049; /* Color al pasar el mouse */
-    transform: translateY(-2px); /* Elevación */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el mouse */
+    background: linear-gradient(45deg, #66BB6A, #388E3C); /* Degradado más claro al pasar el mouse */
+    transform: translateY(-4px); /* Elevación mayor al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    cursor: pointer; /* Cambia el cursor a pointer */
+}
+
+.agregar-noticia:active {
+    transform: translateY(-1px); /* Reducir la elevación al hacer clic */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra más leve al hacer clic */
 }
