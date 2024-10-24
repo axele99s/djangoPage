@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Sección de Noticias</title>
+</head>
+<body>
+    <header>
+        <h1>Noticias Recientes</h1>
+    </header>
+
+    <main>
+        {% for noticia in noticias %}
+        <article class="noticia">
+            <h2>{{ noticia.titulo }}</h2>
+            <p class="fecha">Publicado el {{ noticia.fecha|date:"d  F Y" }}</p>
+            <p class="contenido">
+                {{ noticia.descripcion }}
+            </p>
+            <a href="#" class="leer-mas">Leer más</a>
+        </article>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Nombre o Tu Empresa</p>
+    </footer>
+</body>
+</html>
