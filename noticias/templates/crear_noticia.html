@@ -1,0 +1,35 @@
+<!-- crear_noticia.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Agregar Noticia</title>
+</head>
+<body>
+    <header>
+        <h1>Agregar Nueva Noticia</h1>
+    </header>
+
+    <main>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+            <div>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+            </div>
+            <button type="submit">Guardar Noticia</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Nombre o Tu Empresa</p>
+    </footer>
+</body>
+</html>
